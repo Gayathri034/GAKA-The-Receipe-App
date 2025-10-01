@@ -89,7 +89,7 @@ Whether you’re experimenting with ingredients, preparing daily meals, or explo
 ---
 
 ## 👨‍💻 Author
-Project by **<Jahnavi Gayathri Lakshmisetti>**
+Project by **<JahnaviLakshmisetti>**
 
 ---
 
