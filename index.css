@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rainbow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.animate-rainbow {
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+  50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
