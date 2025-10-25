@@ -1,18 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import "./App.css";
 
-function App() {
+// HomePage component for the welcome screen
+function HomePage() {
   const bgRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const bg = bgRef.current;
     const ctx = bg.getContext("2d");
-    const emojis = ["🍎", "🥕", "🍇", "🍅", "🍓", "🥦", "🍉", "🍒", "🥑", "🍊"];
+    const emojis = ["🍎","🥕","🍇","🍅","🍓","🥦","🍉","🍒","🥑","🍊"];
     const particles = [];
     const width = (bg.width = window.innerWidth);
     const height = (bg.height = window.innerHeight);
 
-    // Create scrolling fruits and veggies
     for (let i = 0; i < 80; i++) {
       particles.push({
         emoji: emojis[Math.floor(Math.random() * emojis.length)],
@@ -40,14 +45,31 @@ function App() {
     animate();
   }, []);
 
+  const handleGetStarted = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="app-container">
       <canvas ref={bgRef}></canvas>
       <div className="center-text">
-        <h1>GAKA WORLD</h1>
+        <h1> GAKA WORLD </h1>
         <p>🍳 Discover, Cook & Enjoy!</p>
+        <button className="get-started-button" onClick={handleGetStarted}>
+          Get Started
+        </button>
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+    </Routes>
   );
 }
 
