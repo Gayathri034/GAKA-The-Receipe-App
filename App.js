@@ -3,6 +3,10 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Recipes from "./pages/Recipes";
+import RecipeDetails from "./pages/RecipeDetails"; 
+
+
 import "./App.css";
 
 // HomePage component for the welcome screen
@@ -69,8 +73,11 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/recipes" element={<Recipes />} />
+      <Route path="/recipes/:name" element={<RecipeDetails />} /> {/* NEW */}
     </Routes>
   );
 }
+
 
 export default App;
