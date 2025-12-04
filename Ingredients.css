@@ -1,0 +1,45 @@
+.ingredients-wrapper {
+  padding: 30px;
+}
+
+.ingredient-input {
+  width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #999;
+}
+
+.add-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #008b8b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ingredient-list {
+  margin-top: 20px;
+}
+
+.ingredient-chip {
+  display: inline-block;
+  background: #ffb6c1;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 12px;
+}
+
+.find-recipes-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  background: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
